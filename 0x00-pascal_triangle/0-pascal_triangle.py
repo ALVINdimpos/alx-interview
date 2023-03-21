@@ -1,7 +1,4 @@
 def pascal_triangle(n):
-    """
-    Generates Pascal's Triangle up to the nth row.
-    """
     triangle = []
     for i in range(n):
         row = [1]
