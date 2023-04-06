@@ -1,14 +1,19 @@
+#!/usr/bin/python3
+"""
+Minimum Operations module"""
+
 def minOperations(n):
     if n <= 1:
         return 0
-    i = 2
-    res = n
-    while i * i <= n:
-        if n % i == 0:
-            res = res - (res // i)
-            while n % i == 0:
-                n //= i
-        i += 1
-    if n > 1:
-        res = res - (res // n)
-    return res
+    
+    operations = 0
+    factor = 2
+    
+    while factor <= n:
+        if n % factor == 0:
+            operations += factor
+            n /= factor
+        else:
+            factor += 1
+    
+    return operations

@@ -1,6 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
-from 0-minoperations import minOperations
+"""
+Main file for testing
+"""
+
+minOperations = __import__('0-minoperations').minOperations
 
 n = 4
 print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
